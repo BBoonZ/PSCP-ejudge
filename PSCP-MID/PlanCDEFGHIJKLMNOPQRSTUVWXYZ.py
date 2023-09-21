@@ -23,7 +23,7 @@ def main():
                 print("%.2f, %.2f, %.2f"% (val3, val1, val2))
     if txt == 'Descend':
         txt2(val1, val2, val3)
- 
+
 def txt2(val1, val2, val3):
     """w"""
     if val1 <= val2 and val3 <= val2:

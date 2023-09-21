@@ -1,13 +1,12 @@
-val_1 = input()
-val_2 = input()
-val_3 = input()
+txt = 'Bom 6bay, German Rex, Manx, Manx'
+mlist = []
 
-my_list = []
-my_list.append(val_1+val_2+val_3)
-my_list.append(val_1+val_3+val_2)
-my_list.append(val_2+val_1+val_3)
-my_list.append(val_2+val_3+val_1)
-my_list.append(val_3+val_1+val_2)
-my_list.append(val_3+val_2+val_1)
+mlist.extend(txt.split(','))
+print(mlist)
 
-print(my_list)
+txt2 = 'Bom bay'
+txt3 = ' Bom bay'
+txt4 = ' Bombay'
+print(txt2.lstrip())
+print(txt3.lstrip())
+print(txt4.lstrip())

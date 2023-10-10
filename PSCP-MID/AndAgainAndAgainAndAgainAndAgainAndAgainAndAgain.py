@@ -1,20 +1,22 @@
 """AndAgainAndAgainAndAgainAndAgainAndAgainAndAgain"""
 def main():
     """ห้ะ"""
-    text = input().split()
+    txt = input().split()
+    ae_ = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     output = []
-    for i in text:
-        txt = ''
-        if len(i) > 2:
-            for j in i:
-                if j.isalpha():
-                    txt += j
-            if len(txt) >= 2:
-                output.append(txt)
-    output.sort(key=ascii)
-    if output != []:
-        for i in output:
-            print(i)
-    else:
-        print('Nope')
+    for i in txt:
+        check = ''
+        count = 0
+        for j in i:
+            if j in ae_ and len(i) >= 2:
+                count += 1
+        for j in i:
+            if count >= 2 and j != '.':
+                check += j
+        if check != '':
+            output.append(check)
+    if output == []:
+        return print('Nope')
+    output.sort()
+    print(*output, sep='\n')
 main()

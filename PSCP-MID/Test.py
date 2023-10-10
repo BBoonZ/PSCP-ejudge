@@ -1,12 +1,9 @@
-txt = 'Bom 6bay, German Rex, Manx, Manx'
-mlist = []
+txt = [5, 2, 3, [7, [10, [12, 11], 9], 20], 4]
 
-mlist.extend(txt.split(','))
-print(mlist)
+print(isinstance(txt, (str, float, int)))
 
-txt2 = 'Bom bay'
-txt3 = ' Bom bay'
-txt4 = ' Bombay'
-print(txt2.lstrip())
-print(txt3.lstrip())
-print(txt4.lstrip())
+print(len(txt))
+
+x = txt[3].copy()
+
+print(x)

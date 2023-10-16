@@ -1,14 +1,9 @@
 """Seeker"""
-def main(txt, num=''):
+def main(txt):
     """find u aa"""
-    num_list = []
     for i in txt:
-        if i.isalpha():
-            continue
-        else:
-            num += i
-        if num != '':
-            num_list.append(num)
-            num = ''
-    print(num_list)
+        if not i.isnumeric():
+            txt = txt.replace(i, ' ')
+    txt = txt.split()
+    print(sum(int(i) for i in txt))
 main(input()+'a')

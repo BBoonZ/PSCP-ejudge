@@ -1,3 +1,2 @@
-txt = input()
-txt = (txt.replace(i, ' ') for i in txt if i.isalpha())
-print(txt)
+print(abs(ord('A') - ord('X')), abs(abs(ord('A') - ord('X'))-26))\
+

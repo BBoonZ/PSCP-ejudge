@@ -1,5 +1,6 @@
 """[Recommended] RunGame"""
 def main(item, dis=0):
+    """forest gum"""
     last_dis = 0
     for i in item:
         dis += abs(last_dis-int(i))

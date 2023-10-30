@@ -1,11 +1,15 @@
-"""Ink"""
-import math
-def main():
-    """Ink or Drink"""
-    val = input().split()
-    location = [input().split() for _ in range(int(val[1]))]
-    val = int(val[0])
-    for i in location:
-        radius_house = (int(i[0])**2+int(i[1])**2)**0.5
-        print(math.ceil((radius_house**2*3.1416)/val))
-main()
+"""CalculatorV2"""
+def calculator(num):
+    """count how many press"""
+    count = 0
+    if num == 1:
+        print(1)
+    else:
+        for i in range(1, len(str(num))+1):
+            num_range = range(10**(i-1), (10**i)-1)
+            num_cal = ((10**i)) - (10**(i-1))
+            if num in num_range:
+                num_cal = (num - (10**(i-1)))+1
+            count += num_cal*(1+i)
+        print(count)
+calculator(int(input()))

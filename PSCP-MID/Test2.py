@@ -1,15 +1,12 @@
-"""BusStop I"""
-def main():
-    """yark na"""
-    ppl = int(input())
-    sign = int(input())
-    count = 0
-    car = []
-    check_s = []
-    new = []
-    for i in range(sign):
-        new.append(input().split())
-    
-    new.sort(key=lambda x: int(x[0]))
-    print(new)
-main()
+while True:
+    try :
+        x = int(input('Please enter int '))
+        y = int(input('Please enter int '))
+        result = y/x
+    except ValueError :
+        print('you must enter integer\n')
+    except ZeroDivisionError:
+        print('Zero')
+    else:
+        print(result)
+

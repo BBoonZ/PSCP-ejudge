@@ -8,8 +8,10 @@ def main():
             val = 10
             book.append(int(val))
             book = sorted(book)
-        #print(sum(book[len(book)//5:]) if len(book) != 5 else sum(book))
-        boss = (sum(book[len(book)//5:]) if len(book) != 5 else sum(book))
+            if len(book)//5 == 3:
+                boss = (sum(book[len(book)//5-1:]))
+            else:
+                boss = (sum(book[len(book)//5:]) if len(book)//5 > 1 else sum(book))
 
         for i in range(ren):
             each = 10

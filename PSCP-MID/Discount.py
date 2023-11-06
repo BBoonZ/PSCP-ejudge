@@ -8,5 +8,7 @@ def main():
             break
         book.append(int(val))
     book = sorted(book)
-    print(sum(book[len(book)//5:]) if len(book)%5 != 0 else sum(book[len(book)//5-1:]))
+    if len(book)//5 == 3:
+        return print(sum(book[len(book)//5-1:]))
+    print(sum(book[len(book)//5:]) if len(book) != 5 else sum(book))
 main()
